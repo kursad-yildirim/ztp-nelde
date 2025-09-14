@@ -38,10 +38,10 @@ spec:
     nodes:
       - hostName: "ash.nazg.middle.earth"
         role: "master"
-        bmcAddress: "redfish+http://10.140.2.4:8000/redfish/v1/Systems/05dd1ebc-6f60-43be-a48a-9e64b31c339b"
+        bmcAddress: "redfish+http://10.150.2.4:8000/redfish/v1/Systems/b5232c25-d806-4146-afde-0df7adcfd2d6"
         bmcCredentialsName:
           name: "ash-bmh-secret"
-        bootMACAddress: "aa:aa:10:14:12:11"
+        bootMACAddress: "aa:aa:10:15:12:11"
         bootMode: "UEFI"
         rootDeviceHints:
           deviceName: "/dev/vda"
