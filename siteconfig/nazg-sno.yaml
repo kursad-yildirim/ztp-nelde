@@ -1,0 +1,75 @@
+apiVersion: ran.openshift.io/v1
+kind: SiteConfig
+metadata:
+  name: "nazg"
+  namespace: "nazg"
+spec:
+  baseDomain: "middle.earth"
+  pullSecretRef:
+    name: "quay-middle-earth-pull-secret"
+  clusterImageSetNameRef: "openshift-4.18-mirrored"
+  sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC1LGYt1bWjAG3WC+BxQBazfoepLErT9bScSWdJXh2aR+hAHisAM5JlopK7ZbW1r2ryl/b4p/QwTHbVAba4pAE+rnyT0u+dHE1amlxAws0WG3sNvT6t84cjtz2G7thaE2gCD7jJdqhjzj92e+/x0nmQ5O+sD3BlpUpYV6wsv4FWPoauWRw3x/zJ/WWzcnoeGNOj4hoR7hKdIS2exMFaDzhxl0SsrU3gCqXJSuxodq/yDwE433865gdmYUxdMDO0NMb9H0O9TSWElZG1WST6rlb41CsoKn6gbMLJmMmHW1HtjZZhGJPqQfDPOW3BpRu/lj67RfZikpbIC6TcJvekRVgDIH5j8WXXSWYotb3/DtkzjYBcuOQLizZrPkDlU9chABQpVRz4V1ED4SXE4F7pClZcHYDfGrgbmQ63mgFomytEywmnPvfPgXtRQPpOeXZYJaxJUm+ATq+UdWFqAsNfS1DbJIb57ss9BXYPCfhYVqkIK+Avne0uoZIbzTYHde+n7CA9oOuvX8a2ON0T5X0fAYcwxR4jkDjYNTWQDRPbQL38L1Akpx49b7heVDksGvtBPME5wypsDFeGBPKnXc/a86vsPUAEmBZQ7pQEn4QigIFRb74Eb9okNHlhVn12OGXgAOurxcqLgo7aXbisj9XYpLUd01OEEz2xkZLRlkNbLC+zMw== trip@middle.earth"
+  clusters:
+  - clusterName: "nazg"
+    networkType: "OVNKubernetes"
+    installConfigOverrides: |
+      {
+        "capabilities": {
+          "baselineCapabilitySet": "None",
+          "additionalEnabledCapabilities": [
+            "NodeTuning",
+            "OperatorLifecycleManager",
+            "Ingress"
+          ]
+        }
+      }
+    clusterLabels:
+      du-profile: "latest"
+      common: true
+      group-du-nazg: ""
+      sites : "nazg"
+    clusterNetwork:
+      - cidr: 10.128.0.0/14
+        hostPrefix: 23
+    machineNetwork:
+      - cidr: 10.140.0.0/16
+    serviceNetwork:
+      - 172.30.0.0/16
+    nodes:
+      - hostName: "ash.nazg.middle.earth"
+        role: "master"
+        bmcAddress: "redfish+http://10.140.2.4:8000/redfish/v1/Systems/05dd1ebc-6f60-43be-a48a-9e64b31c339b"
+        bmcCredentialsName:
+          name: "ash-bmh-secret"
+        bootMACAddress: "aa:aa:10:14:12:11"
+        bootMode: "UEFI"
+        rootDeviceHints:
+          deviceName: "/dev/vda"
+        nodeNetwork:
+          interfaces:
+            - name: enp1s0
+              macAddress: "aa:aa:10:14:12:11"
+          config:
+            interfaces:
+              - name: enp1s0
+                type: ethernet
+                state: up
+                ipv6:
+                  enabled: false
+                ipv4:
+                  enabled: true
+                  address:
+                    - ip: 10.140.12.1
+                      prefix-length: 16
+            dns-resolver:
+              config:
+                search:
+                - middle.earth
+                server:
+                - 10.140.254.254
+            routes:
+              config:
+              - destination: 0.0.0.0/0
+                next-hop-interface: enp1s0
+                next-hop-address: 10.140.254.254
+                table-id: 254

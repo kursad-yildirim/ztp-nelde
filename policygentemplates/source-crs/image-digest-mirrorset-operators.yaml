@@ -1,0 +1,47 @@
+apiVersion: config.openshift.io/v1
+kind: ImageDigestMirrorSet
+metadata:
+  name: idms-operator-0
+  annotations:
+        ran.openshift.io/ztp-deploy-wave: "1"
+spec:
+  imageDigestMirrors:
+  - mirrors:
+    - quay.middle.earth:8443/openshift-gitops-1
+    source: registry.redhat.io/openshift-gitops-1
+  - mirrors:
+    - quay.middle.earth:8443/rhel9
+    source: registry.redhat.io/rhel9
+  - mirrors:
+    - quay.middle.earth:8443/openshift-logging
+    source: registry.redhat.io/openshift-logging
+  - mirrors:
+    - quay.middle.earth:8443/odf4
+    source: registry.redhat.io/odf4
+  - mirrors:
+    - quay.middle.earth:8443/openshift4
+    source: registry.redhat.io/openshift4
+  - mirrors:
+    - quay.middle.earth:8443/rhem
+    source: registry.redhat.io/rhem
+  - mirrors:
+    - quay.middle.earth:8443/quay
+    source: registry.redhat.io/quay
+  - mirrors:
+    - quay.middle.earth:8443/rhbk
+    source: registry.redhat.io/rhbk
+  - mirrors:
+    - quay.middle.earth:8443/multicluster-engine
+    source: registry.redhat.io/multicluster-engine
+  - mirrors:
+    - quay.middle.earth:8443/rhel8
+    source: registry.redhat.io/rhel8
+  - mirrors:
+    - quay.middle.earth:8443/rh-sso-7
+    source: registry.redhat.io/rh-sso-7
+  - mirrors:
+    - quay.middle.earth:8443/rhacm2
+    source: registry.redhat.io/rhacm2
+  - mirrors:
+    - quay.middle.earth:8443/rhceph
+    source: registry.redhat.io/rhceph
