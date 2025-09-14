@@ -4,7 +4,7 @@ metadata:
   name: collect-profiles-config
   namespace: openshift-operator-lifecycle-manager
   annotations:
-    ran.openshift.io/ztp-deploy-wave: "10"
+    ran.openshift.io/ztp-deploy-wave: "1"
 data:
   pprof-config.yaml: |
     disabled: True
