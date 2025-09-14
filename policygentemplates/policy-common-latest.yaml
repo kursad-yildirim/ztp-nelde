@@ -14,5 +14,3 @@ spec:
       policyName: "config-policy"
     - fileName: image-digest-mirrorset-operators.yaml
       policyName: "config-policy"
-    - fileName: olm-disable-collect-profiles.yaml
-      policyName: "config-policy"
