@@ -38,7 +38,7 @@ spec:
     nodes:
       - hostName: "ash.nazg.middle.earth"
         role: "master"
-        bmcAddress: "redfish+http://10.150.2.4:8000/redfish/v1/Systems/b5232c25-d806-4146-afde-0df7adcfd2d6"
+        bmcAddress: "redfish+http://10.150.2.4:8000/redfish/v1/Systems/33329c44-14ea-4ff7-85c1-643890128ac2"
         bmcCredentialsName:
           name: "ash-bmh-secret"
         bootMACAddress: "aa:aa:10:15:12:11"
