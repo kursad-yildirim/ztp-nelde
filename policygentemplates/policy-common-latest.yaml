@@ -10,7 +10,7 @@ spec:
   sourceFiles:
     - fileName: middle-earth-disconnected-catalog-source.yaml
       policyName: "config-policy"
-    - fileName: image-digest-mirrorset-release.yaml
+    - fileName: test/image-digest-mirrorset-release.yaml
       policyName: "config-policy"
-    - fileName: image-digest-mirrorset-operators.yaml
+    - fileName: test/image-digest-mirrorset-operators.yaml
       policyName: "config-policy"
