@@ -1,6 +1,0 @@
-generators:
-- policy-nazg-latest.yaml
-- policy-common-latest.yaml
-
-resources:
-- namespaces.yaml

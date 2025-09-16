@@ -8,9 +8,9 @@ spec:
     common: "true"
     du-profile: "latest"
   sourceFiles:
-    - fileName: test/middle-earth-disconnected-catalog-source.yaml
+    - fileName: middle-earth-disconnected-catalog-source.yaml
       policyName: "config-policy"
-    - fileName: test/image-digest-mirrorset-release.yaml
+    - fileName: image-digest-mirrorset-release.yaml
       policyName: "config-policy"
-    - fileName: test/image-digest-mirrorset-operators.yaml
+    - fileName: image-digest-mirrorset-operators.yaml
       policyName: "config-policy"

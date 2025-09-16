@@ -1,6 +1,5 @@
 generators:
-- tmp/policy-nazg-latest.yaml
-- tmp/policy-common-latest.yaml
+- policy-common-latest.yaml
 
 resources:
 - namespaces.yaml
