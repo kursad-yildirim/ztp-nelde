@@ -38,7 +38,7 @@ spec:
     nodes:
       - hostName: "ash.nazg.middle.earth"
         role: "master"
-        bmcAddress: "redfish+http://10.150.2.2:8000/redfish/v1/Systems/e4ba73bb-0192-48be-979a-2917ec10f8f6"
+        bmcAddress: "redfish+http://10.150.2.2:8000/redfish/v1/Systems/ee5e7006-9f6d-4e31-90ce-3f4a3e5191fb"
         bmcCredentialsName:
           name: "ash-bmh-secret"
         bootMACAddress: "aa:aa:10:15:11:25"
@@ -47,20 +47,9 @@ spec:
           deviceName: "/dev/vda"
         nodeNetwork:
           interfaces:
-            - name: enp1s0
-              macAddress: "aa:aa:10:14:11:25"
+            - name: enp7s0
+              macAddress: "aa:aa:10:15:11:25"
           config:
-            interfaces:
-              - name: enp1s0
-                type: ethernet
-                state: up
-                ipv6:
-                  enabled: false
-                ipv4:
-                  enabled: true
-                  address:
-                    - ip: 10.140.12.1
-                      prefix-length: 16
             dns-resolver:
               config:
                 search:
@@ -70,6 +59,6 @@ spec:
             routes:
               config:
               - destination: 0.0.0.0/0
-                next-hop-interface: enp1s0
+                next-hop-interface: enp7s0
                 next-hop-address: 10.140.254.254
                 table-id: 254
