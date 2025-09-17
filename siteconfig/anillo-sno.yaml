@@ -1,8 +1,8 @@
 apiVersion: ran.openshift.io/v1
 kind: SiteConfig
 metadata:
-  name: "nazg"
-  namespace: "nazg"
+  name: "anillo"
+  namespace: "anillo"
 spec:
   baseDomain: "middle.earth"
   pullSecretRef:
@@ -10,7 +10,7 @@ spec:
   clusterImageSetNameRef: "openshift-4.18-mirrored"
   sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC1LGYt1bWjAG3WC+BxQBazfoepLErT9bScSWdJXh2aR+hAHisAM5JlopK7ZbW1r2ryl/b4p/QwTHbVAba4pAE+rnyT0u+dHE1amlxAws0WG3sNvT6t84cjtz2G7thaE2gCD7jJdqhjzj92e+/x0nmQ5O+sD3BlpUpYV6wsv4FWPoauWRw3x/zJ/WWzcnoeGNOj4hoR7hKdIS2exMFaDzhxl0SsrU3gCqXJSuxodq/yDwE433865gdmYUxdMDO0NMb9H0O9TSWElZG1WST6rlb41CsoKn6gbMLJmMmHW1HtjZZhGJPqQfDPOW3BpRu/lj67RfZikpbIC6TcJvekRVgDIH5j8WXXSWYotb3/DtkzjYBcuOQLizZrPkDlU9chABQpVRz4V1ED4SXE4F7pClZcHYDfGrgbmQ63mgFomytEywmnPvfPgXtRQPpOeXZYJaxJUm+ATq+UdWFqAsNfS1DbJIb57ss9BXYPCfhYVqkIK+Avne0uoZIbzTYHde+n7CA9oOuvX8a2ON0T5X0fAYcwxR4jkDjYNTWQDRPbQL38L1Akpx49b7heVDksGvtBPME5wypsDFeGBPKnXc/a86vsPUAEmBZQ7pQEn4QigIFRb74Eb9okNHlhVn12OGXgAOurxcqLgo7aXbisj9XYpLUd01OEEz2xkZLRlkNbLC+zMw== trip@middle.earth"
   clusters:
-  - clusterName: "nazg"
+  - clusterName: "anillo"
     networkType: "OVNKubernetes"
     installConfigOverrides: |
       {
@@ -26,8 +26,8 @@ spec:
     clusterLabels:
       du-profile: "latest"
       common: true
-      group-du-nazg: ""
-      sites : "nazg"
+      group-du-anillo: ""
+      sites : "shire"
     clusterNetwork:
       - cidr: 10.128.0.0/14
         hostPrefix: 23
@@ -36,19 +36,19 @@ spec:
     serviceNetwork:
       - 172.30.0.0/16
     nodes:
-      - hostName: "ash.nazg.middle.earth"
+      - hostName: "uno.anillo.middle.earth"
         role: "master"
-        bmcAddress: "redfish+http://10.150.2.4:8000/redfish/v1/Systems/18a23798-d575-4356-9e97-8519f88cf358"
+        bmcAddress: "redfish-virtualmedia+http://10.150.2.4:8000/redfish/v1/Systems/18a23798-d575-4356-9e97-8519f88cf358"
         bmcCredentialsName:
-          name: "ash-bmh-secret"
-        bootMACAddress: "aa:aa:10:15:11:25"
+          name: "uno-bmh-secret"
+        bootMACAddress: "aa:aa:10:15:13:01"
         bootMode: "legacy"
         rootDeviceHints:
           deviceName: "/dev/vda"
         nodeNetwork:
           interfaces:
             - name: enp1s0
-              macAddress: "aa:aa:10:14:11:25"
+              macAddress: "aa:aa:10:14:13:01"
           config:
             interfaces:
               - name: enp1s0
@@ -59,7 +59,7 @@ spec:
                 ipv4:
                   enabled: true
                   address:
-                    - ip: 10.140.12.1
+                    - ip: 10.140.13.1
                       prefix-length: 16
             dns-resolver:
               config:
