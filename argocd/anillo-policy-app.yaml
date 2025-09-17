@@ -1,17 +1,12 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: anillo-policy
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: policies
+  name: anillo-policies
   namespace: openshift-gitops
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: policies-sub
+    namespace: anillo
   project: anillo-policy-project
   source:
     path: policygentemplates
