@@ -1,0 +1,337 @@
+# tcpdump -i provisioning port 67 or port 68 -v -nn
+dropped privs to tcpdump
+tcpdump: listening on provisioning, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+12:14:15.816228 IP (tos 0x0, ttl 64, id 256, offset 0, flags [none], proto UDP (17), length 431)
+    0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 403, xid 0xdcbc635a, secs 4, Flags [none]
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Discover
+	    MSZ (57), length 2: 1472
+	    ARCH (93), length 2: 0
+	    NDI (94), length 3: 1.2.1
+	    Vendor-Class (60), length 32: "PXEClient:Arch:00000:UNDI:002001"
+	    User-Class (77), length 4: 
+	      instance#1: [ERROR: invalid option]
+	    Parameter-Request (55), length 23: 
+	      Subnet-Mask (1), Default-Gateway (3), Domain-Name-Server (6), LOG (7)
+	      Hostname (12), Domain-Name (15), RP (17), MTU (26)
+	      Vendor-Option (43), Vendor-Class (60), TFTP (66), BF (67)
+	      Unknown (119), Unknown (128), Unknown (129), Unknown (130)
+	      Unknown (131), Unknown (132), Unknown (133), Unknown (134)
+	      Unknown (135), Unknown (175), Unknown (203)
+	    Unknown (175), length 51: 177.5.1.128.134.16.14.235.3.1.0.0.23.1.1.34.1.1.19.1.1.20.1.1.17.1.1.39.1.1.25.1.1.16.1.2.33.1.1.21.1.1.24.1.1.38.1.1.18.1.1
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    GUID (97), length 17: 0.142.78.135.180.32.60.244.66.146.235.173.63.6.102.102.238
+12:14:18.820796 IP (tos 0xc0, ttl 64, id 12143, offset 0, flags [none], proto UDP (17), length 343)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 315, xid 0xdcbc635a, secs 4, Flags [none]
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Offer
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    BF (67), length 33: "http://10.150.0.3:6180/boot.ipxe^@"
+	    RN (58), length 4: 60
+	    RB (59), length 4: 105
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+12:14:19.877066 IP (tos 0x0, ttl 64, id 687, offset 0, flags [none], proto UDP (17), length 431)
+    0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 403, xid 0xdcbc635a, secs 10, Flags [none]
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Discover
+	    MSZ (57), length 2: 1472
+	    ARCH (93), length 2: 0
+	    NDI (94), length 3: 1.2.1
+	    Vendor-Class (60), length 32: "PXEClient:Arch:00000:UNDI:002001"
+	    User-Class (77), length 4: 
+	      instance#1: [ERROR: invalid option]
+	    Parameter-Request (55), length 23: 
+	      Subnet-Mask (1), Default-Gateway (3), Domain-Name-Server (6), LOG (7)
+	      Hostname (12), Domain-Name (15), RP (17), MTU (26)
+	      Vendor-Option (43), Vendor-Class (60), TFTP (66), BF (67)
+	      Unknown (119), Unknown (128), Unknown (129), Unknown (130)
+	      Unknown (131), Unknown (132), Unknown (133), Unknown (134)
+	      Unknown (135), Unknown (175), Unknown (203)
+	    Unknown (175), length 51: 177.5.1.128.134.16.14.235.3.1.0.0.23.1.1.34.1.1.19.1.1.20.1.1.17.1.1.39.1.1.25.1.1.16.1.2.33.1.1.21.1.1.24.1.1.38.1.1.18.1.1
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    GUID (97), length 17: 0.142.78.135.180.32.60.244.66.146.235.173.63.6.102.102.238
+12:14:19.878982 IP (tos 0xc0, ttl 64, id 12357, offset 0, flags [none], proto UDP (17), length 343)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 315, xid 0xdcbc635a, secs 10, Flags [none]
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Offer
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    BF (67), length 33: "http://10.150.0.3:6180/boot.ipxe^@"
+	    RN (58), length 4: 60
+	    RB (59), length 4: 105
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+12:14:27.951097 IP (tos 0x0, ttl 64, id 1016, offset 0, flags [none], proto UDP (17), length 443)
+    0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 415, xid 0xdcbc635a, secs 18, Flags [none]
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Request
+	    MSZ (57), length 2: 1472
+	    ARCH (93), length 2: 0
+	    NDI (94), length 3: 1.2.1
+	    Vendor-Class (60), length 32: "PXEClient:Arch:00000:UNDI:002001"
+	    User-Class (77), length 4: 
+	      instance#1: [ERROR: invalid option]
+	    Parameter-Request (55), length 23: 
+	      Subnet-Mask (1), Default-Gateway (3), Domain-Name-Server (6), LOG (7)
+	      Hostname (12), Domain-Name (15), RP (17), MTU (26)
+	      Vendor-Option (43), Vendor-Class (60), TFTP (66), BF (67)
+	      Unknown (119), Unknown (128), Unknown (129), Unknown (130)
+	      Unknown (131), Unknown (132), Unknown (133), Unknown (134)
+	      Unknown (135), Unknown (175), Unknown (203)
+	    Unknown (175), length 51: 177.5.1.128.134.16.14.235.3.1.0.0.23.1.1.34.1.1.19.1.1.20.1.1.17.1.1.39.1.1.25.1.1.16.1.2.33.1.1.21.1.1.24.1.1.38.1.1.18.1.1
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    GUID (97), length 17: 0.142.78.135.180.32.60.244.66.146.235.173.63.6.102.102.238
+	    Server-ID (54), length 4: 10.150.10.206
+	    Requested-IP (50), length 4: 10.150.144.178
+12:14:27.954117 IP (tos 0xc0, ttl 64, id 19195, offset 0, flags [none], proto UDP (17), length 343)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 315, xid 0xdcbc635a, secs 18, Flags [none]
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: ACK
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    BF (67), length 33: "http://10.150.0.3:6180/boot.ipxe^@"
+	    RN (58), length 4: 60
+	    RB (59), length 4: 105
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+12:14:35.981892 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto UDP (17), length 304)
+    0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 276, xid 0x172b14f7, secs 1, Flags [none]
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Discover
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    Parameter-Request (55), length 17: 
+	      Subnet-Mask (1), Time-Zone (2), Domain-Name-Server (6), Hostname (12)
+	      Domain-Name (15), MTU (26), BR (28), Classless-Static-Route (121)
+	      Default-Gateway (3), Static-Route (33), YD (40), YS (41)
+	      NTP (42), Unknown (119), Classless-Static-Route-Microsoft (249), Unknown (252)
+	      RP (17)
+	    MSZ (57), length 2: 576
+12:14:35.982868 IP (tos 0xc0, ttl 64, id 25268, offset 0, flags [none], proto UDP (17), length 328)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 300, xid 0x172b14f7, secs 1, Flags [none]
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  sname "10.150.0.3"
+	  file "/undionly.kpxe"
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Offer
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    RN (58), length 4: 60
+	    RB (59), length 4: 105
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+12:14:36.981714 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto UDP (17), length 316)
+    0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 288, xid 0x172b14f7, secs 1, Flags [none]
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Request
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    Parameter-Request (55), length 17: 
+	      Subnet-Mask (1), Time-Zone (2), Domain-Name-Server (6), Hostname (12)
+	      Domain-Name (15), MTU (26), BR (28), Classless-Static-Route (121)
+	      Default-Gateway (3), Static-Route (33), YD (40), YS (41)
+	      NTP (42), Unknown (119), Classless-Static-Route-Microsoft (249), Unknown (252)
+	      RP (17)
+	    MSZ (57), length 2: 576
+	    Requested-IP (50), length 4: 10.150.144.178
+	    Server-ID (54), length 4: 10.150.10.206
+12:14:36.983024 IP (tos 0xc0, ttl 64, id 26066, offset 0, flags [none], proto UDP (17), length 328)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 300, xid 0x172b14f7, secs 1, Flags [none]
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  sname "10.150.0.3"
+	  file "/undionly.kpxe"
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: ACK
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    RN (58), length 4: 60
+	    RB (59), length 4: 105
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+12:14:50.961491 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto UDP (17), length 304)
+    0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 276, xid 0x67db051f, secs 1, Flags [none]
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Discover
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    Parameter-Request (55), length 17: 
+	      Subnet-Mask (1), Time-Zone (2), Domain-Name-Server (6), Hostname (12)
+	      Domain-Name (15), MTU (26), BR (28), Classless-Static-Route (121)
+	      Default-Gateway (3), Static-Route (33), YD (40), YS (41)
+	      NTP (42), Unknown (119), Classless-Static-Route-Microsoft (249), Unknown (252)
+	      RP (17)
+	    MSZ (57), length 2: 576
+12:14:50.962308 IP (tos 0xc0, ttl 64, id 32901, offset 0, flags [none], proto UDP (17), length 328)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 300, xid 0x67db051f, secs 1, Flags [none]
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  sname "10.150.0.3"
+	  file "/undionly.kpxe"
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Offer
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    RN (58), length 4: 60
+	    RB (59), length 4: 105
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+12:14:51.965042 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto UDP (17), length 316)
+    0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 288, xid 0x67db051f, secs 1, Flags [none]
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Request
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    Parameter-Request (55), length 17: 
+	      Subnet-Mask (1), Time-Zone (2), Domain-Name-Server (6), Hostname (12)
+	      Domain-Name (15), MTU (26), BR (28), Classless-Static-Route (121)
+	      Default-Gateway (3), Static-Route (33), YD (40), YS (41)
+	      NTP (42), Unknown (119), Classless-Static-Route-Microsoft (249), Unknown (252)
+	      RP (17)
+	    MSZ (57), length 2: 576
+	    Requested-IP (50), length 4: 10.150.144.178
+	    Server-ID (54), length 4: 10.150.10.206
+12:14:51.967818 IP (tos 0xc0, ttl 64, id 33637, offset 0, flags [none], proto UDP (17), length 328)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 300, xid 0x67db051f, secs 1, Flags [none]
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  sname "10.150.0.3"
+	  file "/undionly.kpxe"
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: ACK
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    RN (58), length 4: 60
+	    RB (59), length 4: 105
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+12:15:50.963776 IP (tos 0x0, ttl 64, id 18868, offset 0, flags [DF], proto UDP (17), length 304)
+    10.150.144.178.68 > 10.150.10.206.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 276, xid 0xdf996b13, secs 1, Flags [none]
+	  Client-IP 10.150.144.178
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Request
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    Parameter-Request (55), length 17: 
+	      Subnet-Mask (1), Time-Zone (2), Domain-Name-Server (6), Hostname (12)
+	      Domain-Name (15), MTU (26), BR (28), Classless-Static-Route (121)
+	      Default-Gateway (3), Static-Route (33), YD (40), YS (41)
+	      NTP (42), Unknown (119), Classless-Static-Route-Microsoft (249), Unknown (252)
+	      RP (17)
+	    MSZ (57), length 2: 65535
+12:15:50.966613 IP (tos 0xc0, ttl 64, id 3982, offset 0, flags [none], proto UDP (17), length 328)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 300, xid 0xdf996b13, secs 1, Flags [none]
+	  Client-IP 10.150.144.178
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  sname "10.150.0.3"
+	  file "/undionly.kpxe"
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: ACK
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    RN (58), length 4: 55
+	    RB (59), length 4: 100
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+12:16:45.961357 IP (tos 0x0, ttl 64, id 18869, offset 0, flags [DF], proto UDP (17), length 304)
+    10.150.144.178.68 > 10.150.10.206.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 276, xid 0x2c5284de, secs 1, Flags [none]
+	  Client-IP 10.150.144.178
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Request
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    Parameter-Request (55), length 17: 
+	      Subnet-Mask (1), Time-Zone (2), Domain-Name-Server (6), Hostname (12)
+	      Domain-Name (15), MTU (26), BR (28), Classless-Static-Route (121)
+	      Default-Gateway (3), Static-Route (33), YD (40), YS (41)
+	      NTP (42), Unknown (119), Classless-Static-Route-Microsoft (249), Unknown (252)
+	      RP (17)
+	    MSZ (57), length 2: 65535
+12:16:45.963862 IP (tos 0xc0, ttl 64, id 21091, offset 0, flags [none], proto UDP (17), length 328)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 300, xid 0x2c5284de, secs 1, Flags [none]
+	  Client-IP 10.150.144.178
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  sname "10.150.0.3"
+	  file "/undionly.kpxe"
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: ACK
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    RN (58), length 4: 54
+	    RB (59), length 4: 99
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+12:17:39.961951 IP (tos 0x0, ttl 64, id 18870, offset 0, flags [DF], proto UDP (17), length 304)
+    10.150.144.178.68 > 10.150.10.206.67: BOOTP/DHCP, Request from aa:aa:10:15:11:25, length 276, xid 0xd2132049, secs 1, Flags [none]
+	  Client-IP 10.150.144.178
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Request
+	    Client-ID (61), length 7: ether aa:aa:10:15:11:25
+	    Parameter-Request (55), length 17: 
+	      Subnet-Mask (1), Time-Zone (2), Domain-Name-Server (6), Hostname (12)
+	      Domain-Name (15), MTU (26), BR (28), Classless-Static-Route (121)
+	      Default-Gateway (3), Static-Route (33), YD (40), YS (41)
+	      NTP (42), Unknown (119), Classless-Static-Route-Microsoft (249), Unknown (252)
+	      RP (17)
+	    MSZ (57), length 2: 65535
+12:17:39.964196 IP (tos 0xc0, ttl 64, id 3786, offset 0, flags [none], proto UDP (17), length 328)
+    10.150.10.206.67 > 10.150.144.178.68: BOOTP/DHCP, Reply, length 300, xid 0xd2132049, secs 1, Flags [none]
+	  Client-IP 10.150.144.178
+	  Your-IP 10.150.144.178
+	  Server-IP 10.150.10.206
+	  Client-Ethernet-Address aa:aa:10:15:11:25
+	  sname "10.150.0.3"
+	  file "/undionly.kpxe"
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: ACK
+	    Server-ID (54), length 4: 10.150.10.206
+	    Lease-Time (51), length 4: 120
+	    RN (58), length 4: 55
+	    RB (59), length 4: 100
+	    Subnet-Mask (1), length 4: 255.255.0.0
+	    BR (28), length 4: 10.150.255.255
+
