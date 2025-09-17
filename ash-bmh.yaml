@@ -1,0 +1,73 @@
+apiVersion: metal3.io/v1alpha1
+kind: BareMetalHost
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+    bmac.agent-install.openshift.io/hostname: ash.nazg.middle.earth
+    bmac.agent-install.openshift.io/role: master
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"metal3.io/v1alpha1","kind":"BareMetalHost","metadata":{"annotations":{"argocd.argoproj.io/sync-wave":"3","bmac.agent-install.openshift.io/hostname":"ash.nazg.middle.earth","bmac.agent-install.openshift.io/role":"master","ran.openshift.io/ztp-gitops-generated":"{}"},"labels":{"app.kubernetes.io/instance":"nazg-cluster","infraenvs.agent-install.openshift.io":"nazg"},"name":"ash.nazg.middle.earth","namespace":"nazg"},"spec":{"automatedCleaningMode":"disabled","bmc":{"address":"redfish+http://10.150.2.4:8000/redfish/v1/Systems/90650ac3-6665-4da8-9f3d-b99c34948d60","credentialsName":"ash-bmh-secret","disableCertificateVerification":true},"bootMACAddress":"aa:aa:10:15:12:11","bootMode":"UEFI","online":true,"rootDeviceHints":{"deviceName":"/dev/vda"}}}
+    ran.openshift.io/ztp-gitops-generated: '{}'
+  creationTimestamp: "2025-09-17T08:27:06Z"
+  finalizers:
+  - baremetalhost.metal3.io
+  - bmac.agent-install.openshift.io/deprovision
+  generation: 2
+  labels:
+    app.kubernetes.io/instance: nazg-cluster
+    infraenvs.agent-install.openshift.io: nazg
+  name: ash.nazg.middle.earth
+  namespace: nazg
+  resourceVersion: "5164813"
+  uid: 6ce5d254-e7b8-40e4-bb24-462407882c47
+spec:
+  automatedCleaningMode: disabled
+  bmc:
+    address: redfish+http://10.150.2.4:8000/redfish/v1/Systems/90650ac3-6665-4da8-9f3d-b99c34948d60
+    credentialsName: ash-bmh-secret
+    disableCertificateVerification: true
+  bootMACAddress: aa:aa:10:15:12:11
+  bootMode: UEFI
+  customDeploy:
+    method: start_assisted_install
+  online: true
+  rootDeviceHints:
+    deviceName: /dev/vda
+status:
+  errorCount: 0
+  errorMessage: ""
+  goodCredentials:
+    credentials:
+      name: ash-bmh-secret
+      namespace: nazg
+    credentialsVersion: "5142616"
+  hardwareProfile: unknown
+  lastUpdated: "2025-09-17T08:27:17Z"
+  operationHistory:
+    deprovision:
+      end: null
+      start: null
+    inspect:
+      end: null
+      start: "2025-09-17T08:27:17Z"
+    provision:
+      end: null
+      start: null
+    register:
+      end: "2025-09-17T08:27:17Z"
+      start: "2025-09-17T08:27:06Z"
+  operationalStatus: OK
+  poweredOn: false
+  provisioning:
+    ID: 41c24131-59b3-46ea-aeb8-02028a9d9de9
+    bootMode: UEFI
+    image:
+      url: ""
+    rootDeviceHints:
+      deviceName: /dev/vda
+    state: inspecting
+  triedCredentials:
+    credentials:
+      name: ash-bmh-secret
+      namespace: nazg
+    credentialsVersion: "5142616"
