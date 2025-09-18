@@ -1,5 +1,0 @@
-generators:
-- policy-common-latest.yaml
-
-resources:
-- namespaces.yaml
