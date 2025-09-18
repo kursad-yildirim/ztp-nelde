@@ -41,7 +41,7 @@ spec:
         bmcAddress: "redfish+http://10.150.2.4:8000/redfish/v1/Systems/d074d3c2-bf75-4f0a-afcb-46e3973a7a1a"
         bmcCredentialsName:
           name: "ash-bmh-secret"
-        bootMACAddress: "aa:aa:10:15:12.01"
+        bootMACAddress: "aa:aa:10:15:12:01"
         bootMode: "UEFI"
         rootDeviceHints:
           deviceName: "/dev/vda"
