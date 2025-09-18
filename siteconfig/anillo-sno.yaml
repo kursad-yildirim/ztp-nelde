@@ -38,7 +38,7 @@ spec:
     nodes:
       - hostName: "uno.anillo.middle.earth"
         role: "master"
-        bmcAddress: "redfish-virtualmedia+http://10.150.2.4:8000/redfish/v1/Systems/18631432-8f0c-4ecd-a589-823519c654af"
+        bmcAddress: "redfish-virtualmedia+http://10.150.2.4:8000/redfish/v1/Systems/535cb3b2-2715-4980-a469-22de98112d99"
         bmcCredentialsName:
           name: "uno-bmh-secret"
         bootMACAddress: "aa:aa:10:15:13:01"
