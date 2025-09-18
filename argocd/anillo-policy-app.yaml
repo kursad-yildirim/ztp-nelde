@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: anillo
+    namespace: ztp-anillo
   project: anillo-policy-project
   source:
     path: policygentemplates
