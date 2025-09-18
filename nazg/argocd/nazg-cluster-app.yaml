@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: clusters-sub
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nazg-cluster
+  namespace: openshift-gitops
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: clusters-sub
+  project: nazg-cluster-project
+  source:
+    path: nazg/siteconfig
+    repoURL: git@github.com:kursad-yildirim/ztp-nelde.git
+    targetRevision: main
+  ignoreDifferences:
+    - group: cluster.open-cluster-management.io
+      kind: ManagedCluster
+      managedFieldsManagers:
+        - controller
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - PrunePropagationPolicy=background
+      - RespectIgnoreDifferences=true
