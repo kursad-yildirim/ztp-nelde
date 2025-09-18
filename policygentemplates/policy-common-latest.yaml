@@ -2,6 +2,7 @@ apiVersion: ran.openshift.io/v1
 kind: PolicyGenTemplate
 metadata:
   name: "policy-common-latest"
+  namespace: "anillo"
 spec:
   bindingRules:
     common: "true"
