@@ -1,20 +1,15 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: nazg-policy
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nazg-policies
+  name: common-policies
   namespace: openshift-gitops
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: policies-sub
-  project: nazg-policy-project
+    namespace: ztp-nelde-common
+  project: common-policy-project
   source:
-    path: nazg/policygentemplates
+    path: common/policygentemplates
     repoURL: git@github.com:kursad-yildirim/ztp-nelde.git
     targetRevision: main
   syncPolicy:

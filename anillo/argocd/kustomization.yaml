@@ -6,6 +6,3 @@ resources:
   - anillo-cluster-app.yaml
   - anillo-cluster-project.yaml
   - anillo-cluster-rolebinding.yaml
-  - anillo-policy-app.yaml
-  - anillo-policy-project.yaml
-  - anillo-policy-rolebinding.yaml

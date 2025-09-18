@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: ztp-anillo
-  annotations:
-    ran.openshift.io/ztp-deploy-wave: "0"
----
-

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: anillo-policy-project
+  name: common-policy-project
   namespace: openshift-gitops
 spec:
   clusterResourceWhitelist:
