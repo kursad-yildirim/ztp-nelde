@@ -38,17 +38,17 @@ spec:
     nodes:
       - hostName: "ash.nazg.middle.earth"
         role: "master"
-        bmcAddress: "redfish+http://10.150.2.2:8000/redfish/v1/Systems/e4ba73bb-0192-48be-979a-2917ec10f8f6"
+        bmcAddress: "redfish+http://10.150.2.4:8000/redfish/v1/Systems/d074d3c2-bf75-4f0a-afcb-46e3973a7a1a"
         bmcCredentialsName:
           name: "ash-bmh-secret"
-        bootMACAddress: "aa:aa:10:15:11:25"
-        bootMode: "legacy"
+        bootMACAddress: "aa:aa:10:15:12.01"
+        bootMode: "UEFI"
         rootDeviceHints:
           deviceName: "/dev/vda"
         nodeNetwork:
           interfaces:
             - name: enp1s0
-              macAddress: "aa:aa:10:14:11:25"
+              macAddress: "aa:aa:10:14:12:01"
           config:
             interfaces:
               - name: enp1s0
