@@ -42,7 +42,7 @@ spec:
         bmcCredentialsName:
           name: "uno-bmh-secret"
         bootMACAddress: "aa:aa:10:15:13:01"
-        bootMode: "legacy"
+        bootMode: "UEFI"
         rootDeviceHints:
           deviceName: "/dev/vda"
         nodeNetwork:

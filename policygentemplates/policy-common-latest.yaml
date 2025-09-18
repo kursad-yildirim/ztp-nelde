@@ -2,7 +2,6 @@ apiVersion: ran.openshift.io/v1
 kind: PolicyGenTemplate
 metadata:
   name: "policy-common-latest"
-  namespace: "ztp-common"
 spec:
   bindingRules:
     common: "true"
