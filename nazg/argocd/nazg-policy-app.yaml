@@ -14,7 +14,7 @@ spec:
     namespace: policies-sub
   project: nazg-policy-project
   source:
-    path: policygentemplates
+    path: nazg/policygentemplates
     repoURL: git@github.com:kursad-yildirim/ztp-nelde.git
     targetRevision: main
   syncPolicy:

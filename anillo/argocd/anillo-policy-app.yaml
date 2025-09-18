@@ -9,7 +9,7 @@ spec:
     namespace: ztp-anillo
   project: anillo-policy-project
   source:
-    path: policygentemplates
+    path: anillo/policygentemplates
     repoURL: git@github.com:kursad-yildirim/ztp-nelde.git
     targetRevision: main
   syncPolicy:

@@ -9,7 +9,7 @@ spec:
     namespace: anillo
   project: anillo-cluster-project
   source:
-    path: siteconfig
+    path: anillo/siteconfig
     repoURL: git@github.com:kursad-yildirim/ztp-nelde.git
     targetRevision: main
   ignoreDifferences:
