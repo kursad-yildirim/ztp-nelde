@@ -1,0 +1,5 @@
+generators:
+- policy-nazg-latest.yaml
+
+resources:
+- policy-nazg-ns.yaml

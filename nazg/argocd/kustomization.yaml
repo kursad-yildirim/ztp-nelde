@@ -6,3 +6,6 @@ resources:
   - nazg-cluster-app.yaml
   - nazg-cluster-project.yaml
   - nazg-cluster-rolebinding.yaml
+  - nazg-policy-app.yaml
+  - nazg-policy-project.yaml
+  - nazg-policy-rolebinding.yaml

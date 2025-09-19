@@ -1,0 +1,12 @@
+apiVersion: ran.openshift.io/v1
+kind: PolicyGenTemplate
+metadata:
+  name: "policy-nazg-latest"
+  namespace: "ztp-nelde-nazg"
+spec:
+  bindingRules:
+    nopprof: "true"
+  sourceFiles:
+    - fileName: disable-collect-profiles.yaml
+      policyName: "nazg-policy"
+

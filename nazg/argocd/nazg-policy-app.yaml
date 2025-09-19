@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nazg-policies
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/compare-options: "IgnoreExtraneous"
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ztp-nelde-nazg
+  project: nazg-policy-project
+  source:
+    path: nazg/policygentemplates
+    repoURL: git@github.com:kursad-yildirim/ztp-nelde.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
