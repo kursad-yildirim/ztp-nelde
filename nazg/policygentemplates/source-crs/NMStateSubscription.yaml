@@ -10,7 +10,7 @@ metadata:
 spec:
   channel: "stable"
   name: kubernetes-nmstate-operator
-  source: redhat-operators-disconnected
+  source: cs-redhat-operator-index-v4-18
   sourceNamespace: openshift-marketplace
   installPlanApproval: Manual
 status:
