@@ -27,7 +27,7 @@ spec:
       du-profile: "latest"
       common: true
       group-du-anillo: ""
-      sites : "shire"
+      sites : "anillo"
     clusterNetwork:
       - cidr: 10.128.0.0/14
         hostPrefix: 23

@@ -12,6 +12,10 @@ spec:
     path: common/policygentemplates
     repoURL: git@github.com:kursad-yildirim/ztp-nelde.git
     targetRevision: main
+  ignoreDifferences:
+    - group: policy.open-cluster-management.io
+      kind: Policy
+      name: ztp-nelde-common\..*
   syncPolicy:
     automated:
       prune: true
