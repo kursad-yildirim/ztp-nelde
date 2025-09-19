@@ -6,6 +6,7 @@ metadata:
 spec:
   bindingRules:
     nopprof: "true"
+  remediationAction: enforce
   sourceFiles:
     - fileName: disable-collect-profiles.yaml
       policyName: "nazg-policy"
