@@ -6,4 +6,5 @@ generators:
 
 resources:
 - uno-bmh-secret.yaml
+- dos-bmh-secret.yaml
 - quay-middle-earth-pull-secret.yaml
