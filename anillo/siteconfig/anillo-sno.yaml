@@ -75,7 +75,7 @@ spec:
                 table-id: 254
       - hostName: "dos.anillo.middle.earth"
         role: "worker"
-        bmcAddress: "redfish-virtualmedia+http://10.150.2.4:8000/redfish/v1/Systems/eda6bc19-f28f-4c1c-92e9-7d20f1df27c4"
+        bmcAddress: "redfish-virtualmedia+http://10.150.2.4:8000/redfish/v1/Systems/4178da4d-f6eb-4ffc-a978-113f7c0b96b0"
         bmcCredentialsName:
           name: "dos-bmh-secret"
         bootMACAddress: "aa:aa:10:15:13:02"
