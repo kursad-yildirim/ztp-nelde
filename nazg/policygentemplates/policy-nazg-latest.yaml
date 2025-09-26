@@ -10,13 +10,13 @@ spec:
   sourceFiles:
     - fileName: disable-collect-profiles.yaml
       policyName: "nazg-policy"
-#    - fileName: NMStateOperatorStatus.yaml
-#      policyName: "nazg-policy"
-#    - fileName: NMStateSubscriptionNS.yaml
-#      policyName: "nazg-policy"
-#    - fileName: NMStateSubscriptionOperGroup.yaml
-#      policyName: "nazg-policy"
-#    - fileName: NMStateSubscription.yaml
-#      policyName: "nazg-policy"
-#    - fileName: NMState.yaml
-#      policyName: "nazg-policy"
+    - fileName: NMStateOperatorStatus.yaml
+      policyName: "nazg-policy"
+    - fileName: NMStateSubscriptionNS.yaml
+      policyName: "nazg-policy"
+    - fileName: NMStateSubscriptionOperGroup.yaml
+      policyName: "nazg-policy"
+    - fileName: NMStateSubscription.yaml
+      policyName: "nazg-policy"
+    - fileName: NMState.yaml
+      policyName: "nazg-policy"
